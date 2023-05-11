@@ -1,0 +1,6 @@
+err_code, 0 ファイル転送が正常に終了しました。
+err_code, 516 集信多重度オーバを検知したため、転送処理を中断しました。
+err_code, 650 HULFT-HUB Serverの処理中にエラーが発生しました。
+err_code, 651 HULFT-HUB Serverの処理中に、配信側クライアント、または配信側のHULFT-HUB Serverからエラー通知を受信しました。
+err_code, 652 HULFT-HUB Serverの処理中に、集信側クライアント、または集信側のHULFT-HUB Serverからエラー通知を受信しました。
+err_code, 653 HULFT Ver.8未満への転送、またはHULFT-HUB Server Ver.3.4.0未満を経由する転送でエラーが発生しました。

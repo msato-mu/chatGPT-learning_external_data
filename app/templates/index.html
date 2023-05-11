@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Custom API</title>
+    <!-- Add your CSS or external stylesheets here -->
+</head>
+
+<body>
+    <h1>Welcome to My Custom API</h1>
+    <p>This is the homepage of my custom API.</p>
+
+    <input type="text" id="question" placeholder="Enter your question">
+    <button onclick="fetchAnswer()">Ask</button>
+    <p id="answer"></p>
+
+    <!-- Add your HTML content and Jinja2 template tags here -->
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Fact</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for fact in facts %}
+            <tr>
+                <td>{{ fact.category }}</td>
+                <td>{{ fact.fact }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Add your JavaScript or external scripts here -->
+    <script>
+        function fetchAnswer() {
+            const question = document.getElementById('question').value;
+            const url = `/api/ask?Q=${encodeURIComponent(question)}`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    const answer = data.response;
+                    document.getElementById('answer').innerText = answer;
+                })
+                .catch(error => {
+                    console.error('Error fetching answer:', error);
+                });
+        }
+    </script>
+</body>
+
+</html>
