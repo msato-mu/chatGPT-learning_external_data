@@ -16,7 +16,7 @@ from langchain.llms import OpenAI
 from langchain.chains import ConversationalRetrievalChain
 
 # ここにOpenAIから取得したキーを設定します。
-os.environ["OPENAI_API_KEY"] = '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'
+os.environ["OPENAI_API_KEY"] = ''
 
 """ # インターネット上からマニュアルファイルをダウンロード（BuffaloTerastation)
 url = 'https://manual.buffalo.jp/buf-doc/35021178-39.pdf'
